@@ -1,6 +1,6 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Rubik+Marker+Hatch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+KR&display=swap');
 
 @font-face {
   font-family: 'EliceDigitalBaeum_Regular';
@@ -61,10 +61,6 @@ body {
 /* HEADER */
 .header {}
 
-.header .inner {
-  width: 90%;
-}
-
 .header-top {
   position: relative;
   display: block;
@@ -74,7 +70,7 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
-.header-top-logo {
+.header-logo {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -223,6 +219,55 @@ body {
   margin-left: 20px;
 }
 
+.scroll-header {
+  position: relative;
+  width: 100%;
+  height: 41px;
+  background: pink;
+}
+
+.scroll-header .header-logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5%;
+  display: block;
+  width: 165px;
+  height: 30px;
+  background: url('../images/logo.png') no-repeat center;
+  background-size: contain;
+  font-size: 0;
+}
+
+.scroll-header .header-gnb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+.scroll-header .header-gnb li {
+  float: left;
+}
+
+.scroll-header .header-gnb li a {
+  font-size: 14px;
+  font-family: 'EliceDigitalBaeum_Regular',serif;
+  font-weight: 600;
+  line-height: 41px;
+  letter-spacing: 0.06em;
+  color: #000;
+  margin: 0 20px;
+}
+
+.scroll-header .header-icon {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  right: 5%;
+}
+
 /* VISUAL */
 .visual {
   position: relative;
@@ -239,10 +284,236 @@ body {
 }
 
 /* INTRO */
+.intro {
+  position: relative;
+  display: block;
+  margin: 0 5%;
+  padding-top: 120px;
+}
+
+.intro span {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.intro h2 {
+  display: block;
+  width: 100%;
+  font-size: 45px;
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: -0.08em;
+  margin-bottom: 40px;
+}
+
+.intro > p {
+  display: block;
+  width: 100%;
+  font-size: 17px;
+  font-family: 'EliceDigitalBaeum_Regular',serif;
+  font-weight: 300;
+  line-height: 1.7;
+  text-align: center;
+  color: #888;
+  margin-bottom: 120px;
+}
+
+.intro-main {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.intro-main li {
+  width: calc(100% / 3);
+  font-family: 'EliceDigitalBaeum_Regular',serif;
+  text-align: center;
+  line-height: 1.4;
+  float: left;
+}
+
+.intro-main li a img {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.intro-main li a h3 {
+  width: 90%;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: -0.08em;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.intro-main li a p {
+  width: 90%;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: #888;
+  margin: 0 auto;
+  background-attachment: fixed;
+}
 
 /* BEST */
+.best {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 150px 5%;
+}
+
+.best h2 {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 48px;
+}
+
+.best h2::after {
+  content: '';
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 35px;
+  height: 2px;
+  background: #111;
+}
+
+.best > p {
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 60px;
+}
+
+.best-item {
+  display: inline-block;
+  width: calc(100% / 3) * 2;
+  margin: 0 auto;
+}
+
+.best-item li {
+  width: 50%;
+  float: left;
+}
+
+.best-item li a img {
+  width: 85%;
+  margin-bottom: 25px;
+}
+
+.best-item li a h3 {
+  width: 85%;
+  font-family: 'EliceDigitalBaeum_Regular',serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 0 auto;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 12px;
+}
+
+.best-item li a p {
+  width: 90%;
+  font-family: 'EliceDigitalBaeum_Regular',serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 18px;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.best-item li a span {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
 
 /* NEW */
+.new {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 70px 5%;
+}
+
+.new h2 {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 48px;
+}
+
+.new h2::after {
+  content: '';
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 35px;
+  height: 2px;
+  background: #111;
+}
+
+.new > p {
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 60px;
+}
+
+.new-item {
+  display: inline-block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.new-item li {
+  width: 25%;
+  float: left;
+}
+
+.new-item li a img {
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.new-item li a h3 {
+  /* 수정필요 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+  width: 90%;
+  min-height: 90px;
+  font-family: 'EliceDigitalBaeum_Regular',serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 0 auto;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 12px;
+}
+
+.new-item li a span {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
 
 /* BRAND */
 
