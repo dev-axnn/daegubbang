@@ -87,6 +87,58 @@ body {
 }
 
 /* === 개별요소 === */
+/* FIX CONTROLLER */
+.fc-controller {
+  position: relative;
+  display: block;
+  z-index: 9999;
+}
+
+.fc-sns {
+  position: fixed;
+  right: 10px;
+  top: 40%;
+}
+
+.fc-sns a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 0;
+  margin-bottom: 5px;
+}
+
+.fc-sns-kakao {
+  background: #000 url('../images/fc-kakao.png') no-repeat center;
+}
+
+.fc-sns-insta {
+  background: #000 url('../images/fc-insta.png') no-repeat center;
+}
+
+.fc-moving {
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+}
+
+.fc-moving a {
+  display: block;
+  width: 40px;
+  font-size: 0;
+}
+
+.fc-moving-gotop {
+  height: 41px;
+  background: url(../images/fc-top.png);
+}
+
+.fc-moving-gobtm {
+  height: 42px;
+  background: url(../images/fc-btm.png);
+}
+
 /* HEADER */
 .header {
   position: relative;
@@ -121,16 +173,20 @@ body {
   top: 50%;
   transform: translateY(-50%);
   left: 5%;
+  display: block;
+  height: 80px;
 }
 
-.header-top-left li {
+.header-top-left > li {
   position: relative;
+  display: block;
+  height: 100%;
   float: left;
   font-size: 13px;
-  line-height: 20px;
+  line-height: 80px;
 }
 
-.header-top-left li span {
+.header-top-left > li span {
   display: inline-block;
   font-size: 14px;
   line-height: 20px;
@@ -139,7 +195,7 @@ body {
   margin-right: 44px;
 }
 
-.header-top-left li:first-child::after {
+.header-top-left > li:first-child::after {
   content: '';
   position: absolute;
   left: 170px;
@@ -151,16 +207,46 @@ body {
   background: #ececec;
 }
 
-.header-top-left li a {
+.header-top-left > li > a {
   padding-left: 18px;
   letter-spacing: 0.06em;
 }
 
-.header-top-left li img {
+.header-top-left > li img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 0;
+}
+
+.comu-list {
+  position: absolute;
+  top: 70%; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  width: 150px;
+  padding: 20px 10px 20px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #ececec;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.header-top-left li:hover .comu-list {
+  display: block;
+}
+
+.comu-list li a {
+  display: block;
+  font-size: 15px;
+  line-height: 25.5px;
+  color: #aaa;
+  white-space: nowrap;
+  padding: 0 10px;
+}
+
+.header .depth2 li:hover > a {
+  color: #000;
 }
 
 .header-top-right {
@@ -211,11 +297,12 @@ body {
   display: block;
 }
 
-.header-gnb li {
+.header-gnb > li {
+  position: relative;
   float: left;
 }
 
-.header-gnb li a {
+.header-gnb > li > a {
   font-size: 18px;
   font-family: 'EliceDigitalBaeum_Regular', serif;
   font-weight: 600;
@@ -225,6 +312,52 @@ body {
   padding: 8px 0 25px 0;
   margin: 3px 25px 0 25px;
   transition: all 0.3s;
+}
+
+.header-gnb > li > a::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background: #000;
+}
+
+.header-gnb > li:hover > a::before {
+  display: block;
+}
+
+.header .depth2 {
+  position: absolute;
+  top: 150%; 
+  left: 0;
+  display: none;
+  width: 150px;
+  padding: 15px 20px 15px 15px;
+  background: rgba(250, 250, 250, 0.95);
+  border: 1px solid #ececec;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.header-gnb > li:hover .depth2 {
+  display: block;
+}
+
+.header .depth2 li a {
+  display: block;
+  font-size: 13px;
+  line-height: 25px;
+  color: #aaa;
+  white-space: nowrap;
+  padding: 0 10px;
+}
+
+.header .depth2 li:hover > a {
+  color: #000;
 }
 
 .header-icon {
@@ -286,25 +419,24 @@ body {
   opacity: 1;
 }
 
-.header-scroll .header-gnb {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-}
-
-.header-scroll .header-gnb li a {
+.header-scroll .header-gnb > li > a {
   font-size: 14px;
   line-height: 41px;
   margin: 0 20px;
 }
 
 .header-scroll .header-icon {
-  position: absolute;
   top: 40%;
-  transform: translateY(-50%);
   right: 5%;
+}
+
+.header-scroll .header-gnb > li > a::before {
+  top: 7px;
+}
+
+.header-scroll .depth2 {
+  top: 99.5%; 
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.04);
 }
 
 /* VISUAL */
@@ -317,7 +449,7 @@ body {
   display: block;
   width: 100%;
   height: calc(100vh - 155px);
-  background: url(../images/visual_1.jpg) no-repeat center;
+  background: url('../images/visual_1.jpg') no-repeat 50% 0%;
   background-size: cover;
   margin: 0 auto;
 }
@@ -446,7 +578,7 @@ body {
   margin-bottom: 4px;
 }
 
-.shopping-group {
+.best-item .shopping-group {
   position: relative;
   display: block;
   width: 85%;
@@ -473,6 +605,10 @@ body {
   visibility: hidden;
   opacity: 0;
   transition: all 0.5s;
+}
+
+.shopping-group button b {
+  font-weight: 700;
 }
 
 .shopping-group img {
@@ -574,8 +710,15 @@ body {
   float: left;
 }
 
-.new-item li img {
+.new-item .shopping-group {
+  position: relative;
+  display: block;
   width: 90%;
+  margin: 0 auto;
+}
+
+.new-item .shopping-group img {
+  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -609,13 +752,43 @@ body {
   padding-top: 12px;
 }
 
+.new-item .shopping-btn {
+  position: absolute;
+  bottom: 11%;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.new-item li:hover .shopping-group button {
+  top: 4%;
+  visibility: visible;
+  opacity: 100;
+}
+
+.new-item li:hover .shopping-btn {
+  visibility: visible;
+  opacity: 100; 
+}
+
+.new-item .shopping-btn li {
+  display: inline-block;
+  width: 32px;
+  height: 30px;
+  
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  border-left: 1px solid #e1e1e1;
+}
+
 /* BRAND */
 .brand {
   position: relative;
   display: block;
   background: #f5f5f5;
   padding-bottom: 120px;
-  z-index: -2;
 }
 
 .brand-bg {
@@ -627,7 +800,6 @@ body {
   background: url('../images/brand-bg.jpg') no-repeat center;
   background-attachment: fixed;
   background-size: cover;
-  z-index: -1;
 }
 
 .brand .inner {
@@ -716,7 +888,6 @@ body {
   display: block;
   background: #f5f5f5;
   padding-bottom: 90px;
-  z-index: -2;
 }
 
 .review .inner {
@@ -725,6 +896,7 @@ body {
 }
 
 .review-list {
+  padding-top: 20px;
   margin-bottom: 70px;
 }
 
@@ -735,6 +907,11 @@ body {
   float: left;
   border-right: 1px solid #f5f5f5;
   background: #fff;
+  transition: transform 0.3s;
+}
+
+.review-list li:hover {
+  transform: translateY(-1.5%);
 }
 
 .review-list li a img {

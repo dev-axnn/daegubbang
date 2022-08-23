@@ -4,21 +4,29 @@
   <meta charset="UTF-8">
   <meta name="format-detection" content="telephone=no">
   <title>근대골목 단팥빵</title>
-  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="shortcut icon" href="images/favicon.png" />
   <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
-
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   
-  <meta name="description" content="STX 건설 웹사이트입니다." />
-  <meta name="keywords" content="STX 건설, STX" />
+  <meta name="description" content="한국 관광고사가 지정한 '관광객이 꼭 가봐야 하는 전국 3대 빵집'"/>
+  <meta http-equiv="Content-Type" content="text/html"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  
+  <!--PG크로스브라우징필수내용 시작-->
+  <meta http-equiv="Cache-Control" content="no-cache"/>
+  <meta http-equiv="Expires" content="0"/>
+  <meta http-equiv="Pragma" content="no-cache"/>
+  <!--PG크로스브라우징필수내용 끝-->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="근대골목 단팥빵" />
   <meta name="author" content="" />
-  <meta property="og:title" content="STX 건설">
-  <meta property="og:site_name" content="STX 건설" />
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="http://www.stxconst.co.kr/">
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="근대골목 단팥빵"/>
+  <meta property="og:site_name" content="근대골목 단팥빵" />
+  <meta property="og:url" content="https://www.daegubbang.co.kr/"/>
   <meta property="og:image" content="">
-  <meta property="og:description" content="STX 건설 웹사이트입니다." />
+  <meta property="og:description" content="한국 관광공사가 지정한 '관광객이 꼭 가봐야 하는 전국 3대 빵집'"/>
+  <meta name="naver-site-verification" content="9771d6f7478e4911c06d21b8685cc2a7e7914d53"/>
 
   <link rel="stylesheet" href="css/reset.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
@@ -34,6 +42,10 @@
   <link rel="stylesheet" href="js/swiper/swiper.min.css">
   <script src="js/swiper/swiper.min.js"></script>
 
+  <!-- aos 관련 코드 -->
+  <link href="js/aos/aos.css" rel="stylesheet">
+  <script src="js/aos/aos.js"></script>
+
   <link rel="stylesheet" href="css/fontello/css/fontello.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js"></script>
@@ -41,13 +53,36 @@
 <body>
   <!-- 모달창 작업시 작성내용 메모 -->
   <!-- 원사이트는 반응형이 없지만 작업함. -->
+  <!-- 파비콘 만들어서 추가함. -->
+  
+  <!-- FIX CONTROLLER -->
+  <div class="fc-controller">
+    <div class="fc-sns">
+      <a href="#" class="fc-sns-kakao">카카오톡 채널로 이동</a>
+      <a href="#" class="fc-sns-insta">인스타그램으로 이동</a>
+    </div>
+  
+    <div class="fc-moving">
+      <a href="#" class="fc-moving-gotop">위로</a>
+      <a href="#" class="fc-moving-gobtm">아래로</a>
+    </div>
+  </div>
+
   <div class="wrap">
     <!-- HEADER -->
     <header class="header">
       <div class="header-top">
         <ul class="header-top-left clearfix">
           <li>CS CENTER <span>1666-1883</span></li>
-          <li><a href="#"><img src="images/top_menu_icon.png" alt="Comunity">COMMUNITY</a></li>
+          <li>
+            <a href="#"><img src="images/top_menu_icon.png" alt="Comunity">COMMUNITY</a>
+            <ul class="comu-list">
+              <li><a href="#">NEWS</a></li>
+              <li><a href="#">Q&A</a></li>
+              <li><a href="#">REVIEW</a></li>
+              <li><a href="#">EVENT</a></li>
+            </ul>
+          </li>
         </ul>
         <a href="#" class="header-logo">근대골목 단팥빵</a>
         <ul class="header-top-right clearfix">
@@ -61,8 +96,25 @@
         <a href="#" class="header-btm-logo">근대골목 단팥빵</a>
         <ul class="header-gnb clearfix">
           <li><a href="#">근대골목 선물세트</a></li>
-          <li><a href="#">BREAD</a></li>
-          <li><a href="#">COFFEE</a></li>
+          <li>
+            <a href="#">BREAD</a>
+            <ul class="depth2">
+              <li><a href="#">단팥빵류</a></li>
+              <li><a href="#">일반빵류</a></li>
+              <li><a href="#">과자류</a></li>
+              <li><a href="#">케이크류</a></li>
+              <li><a href="#">식빵류</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">COFFEE</a>
+            <ul class="depth2">
+              <li><a href="#">홀빈커피</a></li>
+              <li><a href="#">분쇄커피</a></li>
+              <li><a href="#">드립백</a></li>
+              <li><a href="#">디카페인</a></li>
+            </ul>
+          </li>
           <li><a href="#">ETC.</a></li>
           <li><a href="#">B2B</a></li>
           <li><a href="#">CONTACT</a></li>
@@ -83,21 +135,21 @@
     
     <!-- INTRO -->
     <section class="intro">
-      <span>HONGDUDANG</span>
-      <h2>시대를 빚고<br/>문화를 굽는다</h2>
+      <span data-aos="fade-left" data-aos-duration="3000">HONGDUDANG</span>
+      <h2 data-aos="fade-right" data-aos-duration="3000">시대를 빚고<br/>문화를 굽는다</h2>
       <p>어린시절 옛 추억의 단팥빵 맛. 20년 노하우의 기능장이 그 맛을 제공하고 10대부터 80대까지 남녀노소 모두<br/>즐길 수 있는 단팥빵을 제공하는 대구 대표 빵. 근대골목 단팥빵입니다.</p>
       <ul class="intro-main clearfix">
-        <li><a>
+        <li data-aos="fade-up" data-aos-duration="2000"><a href="#">
           <img src="images/intro_banner_1.jpg" alt="근대골목 단팥빵">
           <h3>근대골목 단팥빵</h3>
           <p>30년 전통, 장인들의 정성이 담긴 근대골목 단팥빵</p>
         </a></li>
-        <li><a>
+        <li data-aos="fade-down" data-aos-duration="2000"><a href="#">
           <img src="images/intro_banner_2.jpg" alt="근대골목 선물세트">
           <h3>근대골목 선물세트</h3>
           <p>어르신 입맛부터 어린이 입맛까지! 전 연령층을 사로잡는 근대골목 선물세트</p>
         </a></li>
-        <li><a>
+        <li data-aos="fade-up" data-aos-duration="2000"><a href="#">
           <img src="images/intro_banner_3.jpg" alt="LION COFFEE">
           <h3>LION COFFEE</h3>
           <p>하와이 라이언 커피 한 잔으로 세계 3대 명품 커피를 느껴보세요</p>
@@ -108,9 +160,9 @@
   
     <!-- BEST -->
     <section class="best">
-      <h2 class="section-title">BEST ITEMS</h2>
-      <p class="section-txt">베스트 아이템</p>
-      <ul class="best-item clearfix">
+      <h2 class="section-title" data-aos="fade-right" data-aos-duration="1500">BEST ITEMS</h2>
+      <p class="section-txt" data-aos="fade-right" data-aos-duration="1500">베스트 아이템</p>
+      <ul class="best-item clearfix" data-aos="fade-up" data-aos-duration="2000">
         <li>
           <a href="#">
             <div class="shopping-group">
@@ -122,6 +174,8 @@
                 <li><a href="#" class="shopping-blank"></a><p>새창보기</p></li>
               </ul>
             </div>
+          </a>
+          <a href="#">
             <h3>[근대골목 단팥빵 공식몰] 고구마빵 (1개)</h3>
             <span>3,300원</span>
           </a>
@@ -137,6 +191,8 @@
                 <li><a href="#" class="shopping-blank"></a><p>새창보기</p></li>
               </ul>
             </div>
+          </a>
+          <a href="#">
             <h3>[근대골목 단팥빵 공식몰] 원조단팥빵 (1개)</h3>
             <p>세대를 이어온 달콤함, 홍두당의 대표브랜드</p>
             <span>2,200원</span>
@@ -148,9 +204,9 @@
   
     <!-- NEW -->
     <section class="new">
-      <h2 class="section-title">NEW ITEMS</h2>
-      <p class="section-txt">홍두당의 새로운 제품</p>
-      <ul class="new-item clearfix">
+      <h2 class="section-title" data-aos="fade-right" data-aos-duration="1500">NEW ITEMS</h2>
+      <p class="section-txt" data-aos="fade-right" data-aos-duration="1500">홍두당의 새로운 제품</p>
+      <ul class="new-item clearfix" data-aos="fade-up" data-aos-duration="1000">
         <li>
           <a href="#">
             <div class="shopping-group">
@@ -162,6 +218,8 @@
                 <li><a href="#" class="shopping-blank"></a><p>새창보기</p></li>
               </ul>
             </div>
+          </a>
+          <a href="#">
             <h3>[프리미엄 10% 하와이 코나커피] 로얄코나 메이플 카푸치노 드립백 (70g/2.45oz) (10gx7개입)</h3>
             <span>12,000원</span>
           </a>
@@ -177,6 +235,8 @@
                 <li><a href="#" class="shopping-blank"></a><p>새창보기</p></li>
               </ul>
             </div>
+          </a>
+          <a href="#">
             <h3>[홀빈] 바닐라 마카다미아 원두(680g/24oz)</h3>
             <span>55,000원</span>
           </a>
@@ -192,6 +252,8 @@
                 <li><a href="#" class="shopping-blank"></a><p>새창보기</p></li>
               </ul>
             </div>
+          </a>
+          <a href="#">
             <h3>[근대골목 단팥빵 공식몰]원조단팥빵 (1개)</h3>
             <span>2,200원</span>
           </a>
@@ -207,6 +269,8 @@
                 <li><a href="#" class="shopping-blank"></a><p>새창보기</p></li>
               </ul>
             </div>
+          </a>
+          <a href="#">
             <h3>[프리미엄 10% 하와이 코나커피] 로얄코나 바닐라 마카다미아 드립백 (70g/2.45oz) (10gx7개입)</h3>
             <span>12,000원</span>
           </a>
@@ -219,10 +283,10 @@
     <section class="brand">
       <div class="brand-bg"></div>
       <div class="inner">
-        <h2 class="section-title">BRAND</h2>
+        <h2 class="section-title" data-aos="fade-right" data-aos-duration="1500">BRAND</h2>
         <div class="brandstory">
-          <img src="images/brandstory-img.jpg" alt="근대골목 단팥빵 BRAND STORY">
-          <div class="brandstory-txt">
+          <img src="images/brandstory-img.jpg" alt="근대골목 단팥빵 BRAND STORY" data-aos="fade-up" data-aos-duration="1000">
+          <div class="brandstory-txt" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
             <img src="images/brand-logo.png" alt="근대골목 단팥빵" class="brand-logo">
             <p>
               세대를 이어온 달콤함, 홍두당의 대표브랜드 '대구 근대골목단팥빵'은 <br/>
@@ -230,7 +294,7 @@
               남녀노소 모두 즐길 수 있는 단팥빵을 제공하는 대구 대표의 특산물, <br/>
               근대골목단팥빵입니다.
             </p>
-            <a>BRAND STORY <i class="icon-right"></i></a>
+            <a href="#">BRAND STORY <i class="icon-right"></i></a>
           </div>
         </div>
       </div>
@@ -240,7 +304,7 @@
     <!-- REVIEW -->
     <section class="review">
       <div class="inner">
-        <h2 class="section-title">BEST REVIEW</h2>
+        <h2 class="section-title" data-aos="fade-right" data-aos-duration="1500">BEST REVIEW</h2>
         <ul class="review-list clearfix">
           <li>
             <a href="#">
@@ -282,7 +346,7 @@
   
     <!-- MEDIA -->
     <div class="media">
-      <h2 class="section-title">MEDIA</h2>
+      <h2 class="section-title" data-aos="fade-right" data-aos-duration="1500">MEDIA</h2>
       <video src="images/daegubbang-brand-story.mp4" poster="images/brandstory-vidio-thumbnail.png" controls muted autoplay loop></video>
     </div>
     <!-- //MEDIA -->
