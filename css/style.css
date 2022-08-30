@@ -153,6 +153,7 @@ body {
   height: 80px;
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
+  z-index: 1;
 }
 
 .header-top .header-logo {
@@ -236,6 +237,10 @@ body {
   display: block;
 }
 
+.comu-list li:hover > a {
+  color: #000;
+}
+
 .comu-list li a {
   display: block;
   font-size: 15px;
@@ -267,11 +272,61 @@ body {
   color: #999;
 }
 
+
 .header-btm {
   position: relative;
   width: 100%;
   height: 75px;
   transition: height 0.3s;
+}
+
+/* Mobile Menu */
+.mobile-menu-btn {
+  position: absolute;
+  left: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  width: 27px;
+  height: 23px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: all 0.3s;
+}
+
+.mobile-menu-btn span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -8px;
+  display: block;
+  width: 23px;
+  height: 3px;
+  background: #333;
+}
+
+.mobile-menu-btn span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 23px;
+  height: 3px;
+  background: #333;
+  font-size: 0;
+}
+
+.mobile-menu-btn span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  display: block;
+  width: 23px;
+  height: 3px;
+  background: #333;
 }
 
 .header-btm-logo {
@@ -295,6 +350,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   display: block;
+  width: 738.41px;
 }
 
 .header-gnb > li {
@@ -412,11 +468,16 @@ body {
   height: 41px;
   background: #fff;
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.08);
+  z-index: 2;
 }
 
 .header-scroll .header-btm-logo {
   visibility: visible;
   opacity: 1;
+}
+
+.header-scroll .header-gnb {
+  width: auto;
 }
 
 .header-scroll .header-gnb > li > a {
@@ -452,6 +513,7 @@ body {
   background: url('../images/visual_1.jpg') no-repeat 50% 0%;
   background-size: cover;
   margin: 0 auto;
+  transition: height 0.3s;
 }
 
 /* INTRO */
@@ -523,6 +585,7 @@ body {
   margin: 0 auto;
   margin-bottom: 10px;
 }
+
 .intro-main li a p {
   width: 90%;
   font-size: 17px;
