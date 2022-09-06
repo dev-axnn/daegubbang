@@ -1,9 +1,12 @@
-/* HEADER */
+/* MOBILE MENU */
 @media screen and (max-width: 1200px) {
   .mobile-menu-btn {
     display: block;
   }
+}
 
+/* HEADER */
+@media screen and (max-width: 1200px) {
   .header-top {
     display: none;
   }
