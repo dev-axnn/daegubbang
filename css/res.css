@@ -43,6 +43,12 @@
   }
 }
 
+@media screen and (max-width: 850px) {
+  .mobile-menu-btn {
+    margin-left: 25px;
+  }
+}
+
 /* VISUAL */
 @media screen and (max-width: 1200px) {
   .visual-main {

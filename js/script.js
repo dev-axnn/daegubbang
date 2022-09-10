@@ -1,6 +1,50 @@
 window.onload = function(){
   AOS.init();
 
+  // 모바일 버튼 활성화
+  let menuBtn = $('.mobile-menu-btn');
+  let menuWrap = $('.mbmenu-wrap');
+  menuBtn.click(function(){
+    let result = menuBtn.hasClass('menu-btn-open');
+    if(result == true) {
+      menuBtn.removeClass('menu-btn-open');
+      menuBtn.addClass('menu-btn-close');
+      menuWrap.show();
+    }else{
+      menuBtn.removeClass('menu-btn-close');
+      menuBtn.addClass('menu-btn-open');
+      menuWrap.hide();
+    }
+  });
+
+  // 모바일 메뉴 바깥 부분 클릭시 닫기
+  menuWrap.click(function(){
+    menuBtn.removeClass('menu-btn-close');
+    menuBtn.addClass('menu-btn-open');
+    menuWrap.hide();
+  });
+
+  // 서브메뉴 숨겼다가 나타내기
+  let mainMenu = $('.mbmenu > li');
+  let mainMenuHeight = 50;
+  let subMenu = $('.mbsubmenu');
+  let subMenuItemHeight = 50;
+  let subMenuArr = [];
+
+  $.each(subMenu, function(index, item){
+    let count = $(this).find('li').length;
+    subMenuArr[index] = mainMenuHeight + subMenuItemHeight * count;
+  });
+
+  $.each(mainMenu, function(index, item){
+    $(this).mouseenter(function(){
+      $(this).css('height', subMenuArr[index]);
+    });
+    $(this).mouseleave(function(){
+      $(this).css('height', mainMenuHeight);
+    });
+  });
+
   // 헤더 변형 및 고정
   let headerBtm = $('.header-btm');
   $(window).scroll(function(){
@@ -38,6 +82,18 @@ window.onload = function(){
       cartCount ++;
       headerCartNumber.html(cartCount);
     });
+  });
 
+  // LIKE 수 카운트
+  let likeBtn = $('.likebtn > b');
+  let likeCount = 0;
+  likeBtn.html(likeCount);
+  let addLike = $('.likebtn');
+  $.each(addLike, function(index, item){
+    $(this).click(function(event){
+      event.preventDefault();
+      likeCount ++;
+      likeBtn.html(likeCount);
+    });
   });
 };

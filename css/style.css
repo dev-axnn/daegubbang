@@ -98,7 +98,7 @@ body {
   cursor: pointer;
   border: none;
   background: none;
-  transition: all 0.3s;
+  transition: all 0.5s;
   z-index: 99999;
 }
 
@@ -111,6 +111,7 @@ body {
   width: 23px;
   height: 3px;
   background: #333;
+  transition: all 0.5s;
 }
 
 .mobile-menu-btn span {
@@ -134,13 +135,30 @@ body {
   width: 23px;
   height: 3px;
   background: #333;
+  transition: all 0.5s;
+}
+
+.menu-btn-close span {
+  width: 0;
+}
+
+.menu-btn-close span::after {
+  left: 13px;
+  top: -6px;
+  transform: translate(-50%, 150%) rotate(45deg);
+}
+
+.menu-btn-close span::before {
+  left: 13px;
+  top: -6px;
+  transform: translate(-50%, 150%) rotate(-45deg);
 }
 
 .mbmenu-wrap {
   position: fixed;
   left: 0;
   top: 0;
-  display: block;
+  display: none;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
@@ -152,7 +170,7 @@ body {
   left: 0;
   top: 0;
   display: block;
-  width: 400px;
+  width: 300px;
   height: 100%;
   background: #fff;
 }
@@ -169,22 +187,54 @@ body {
 
 .mbmenu {
   margin-top: 60px;
+  margin-left: 10px;
+}
+
+.mbmenu > li {
+  height: 50px;
+  overflow: hidden;
+  transition: height 0.5s;
 }
 
 .mbmenu > li > a {
   font-size: 18px;
   font-family: 'EliceDigitalBaeum_Regular', serif;
   font-weight: 600;
-  line-height: 30px;
+  line-height: 50px;
   letter-spacing: 0.06em;
   color: #000;
   padding: 8px 0 25px 0;
   margin: 3px 25px 0 25px;
-  transition: all 0.3s;
 }
 
 .mbsubmenu {
-  display: none;
+  display: block;
+  width: 250px;
+  height: 50px;
+  margin-left: 15px;
+}
+
+.mbsubmenu > li {
+  background: #eee;
+  border-bottom: 1px dashed #ccc;
+}
+
+.mbsubmenu > li:last-child {
+  border-bottom: none;
+}
+
+.mbsubmenu > li a {
+  font-size: 16px;
+  font-family: 'EliceDigitalBaeum_Regular', serif;
+  font-weight: 600;
+  line-height: 50px;
+  letter-spacing: 0.06em;
+  color: #444;
+  padding-left: 20px;
+}
+
+.mbmenu > li:hover > a {
+  color: rgb(103, 18, 42);
 }
 
 /* FIX CONTROLLER */
