@@ -97,3 +97,29 @@ window.onload = function(){
     });
   });
 };
+
+$(document).ready(function(){
+  // Modal 기능
+  let modalWrap = $('.modal-wrap');
+  let modalClose = $('.modal-close');
+  // click() 을 이용해서 hide() 해보자!
+  modalClose.click(function(){
+    // modalWrap.hide();
+    modalWrap.stop().fadeOut(300);
+    $('html').css('overflow', 'auto');
+  });
+  $('html').keydown(function (key) {
+    if (key.keyCode == 13) {
+      modalWrap.stop().fadeOut(200);
+      $('html').css('overflow', 'auto');
+    }
+  });
+  let modalMain = $('.modal-main');
+  modalMain.click(function (event) {
+    event.stopPropagation();
+  });
+  modalWrap.click(function () {
+    modalWrap.stop().fadeOut(200);
+    $('html').css('overflow', 'auto');
+  });
+});
