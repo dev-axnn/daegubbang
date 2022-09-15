@@ -216,16 +216,115 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+@media screen and (max-width: 700px) {
+  .modal-main {
+    width: 71vw;
+    height: 57vw;
+  }
+
+  .modal-notice {
+    padding: 15% 6% 6% 6%;
+    font-size: 2.4vw;
+    line-height: 3.2vw;
+  }
+  
+  .modal-notice span {
+    font-size: 2.3vw;
+    margin-top: 2%;
+  }
+
+  .modal-logo {
+    width: 12.3vw;
+    height: 12.3vw;
+    border: 0.5vw solid #fff;
+  }
+
+  .modal-corrections {
+    width: 88%;
+    height: 33.75%;
+    padding: 2vw 3vw;
+  }
+  
+  .modal-close {
+    width: 71.1vw;
+    height: 6.5vw;
+    font-size: 2.5vw;
+    line-height: 6.5vw;
+  }
+
+  .modal-close i {
+    font-size: 2.3vw;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .modal-main {
+    width: 300px;
+    height: 245px;
+  }
+
+  .modal-notice {
+    padding: 15% 6% 5% 6%;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  
+  .modal-notice span {
+    font-size: 11px;
+  }
+
+  .modal-logo {
+    width: 60px;
+    height: 60px;
+    border: 0.5vw solid #fff;
+  }
+
+  .modal-corrections {
+    width: 260px;
+    height: 80px;
+    padding: 10px 15px;
+    font-size: 10px;
+    line-height: 14px;
+  }
+  
+  .modal-corrections strong {
+    font-size: 11px;
+    margin-bottom: 4px;
+    line-height: 14px;
+  }
+  
+  .corrections-number {
+    float: left;
+    width: 6%;
+  }
+  
+  .corrections-txt {
+    float: right;
+    width: 94%;
+  }
+
+  .modal-close {
+    width: 301px;
+    height: 25px;
+    font-size: 11px;
+    line-height: 25px;
+  }
+
+  .modal-close i {
+    display: none;
+  }
+}
 /* /Modal Popup */
 
 /* MOBILE MENU */
 .mobile-menu-btn {
   position: fixed;
-  margin-left: 3%;
-  margin-top: 18px;
+  left: 3%;
+  top: 20px;
   display: none;
-  width: 27px;
-  height: 23px;
+  width: 23px;
+  height: 20px;
   cursor: pointer;
   border: none;
   background: none;
@@ -239,7 +338,7 @@ body {
   left: 0;
   top: -8px;
   display: block;
-  width: 23px;
+  width: 100%;
   height: 3px;
   background: #333;
   transition: all 0.5s;
@@ -251,7 +350,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   display: block;
-  width: 23px;
+  width: 100%;
   height: 3px;
   background: #333;
   font-size: 0;
@@ -261,9 +360,9 @@ body {
   content: '';
   position: absolute;
   left: 0;
-  top: 8px;
+  bottom: -8px;
   display: block;
-  width: 23px;
+  width: 100%;
   height: 3px;
   background: #333;
   transition: all 0.5s;
@@ -293,7 +392,7 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
-  z-index: 99998;
+  z-index: 99997;
 }
 
 .mbmenu-view {
@@ -304,6 +403,7 @@ body {
   width: 300px;
   height: 100%;
   background: #fff;
+  transition: width 0.3s;
 }
 
 .mbmenu::before {
@@ -324,6 +424,10 @@ body {
 .mbmenu > li {
   height: 50px;
   overflow: hidden;
+  transition: height 0.5s ease 0.5s;
+}
+
+.mbmenu > li:hover {
   transition: height 0.5s;
 }
 

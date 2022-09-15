@@ -6,7 +6,7 @@ window.onload = function(){
   let menuWrap = $('.mbmenu-wrap');
   menuBtn.click(function(){
     let result = menuBtn.hasClass('menu-btn-open');
-    if(result == true) {
+    if(result) {
       menuBtn.removeClass('menu-btn-open');
       menuBtn.addClass('menu-btn-close');
       menuWrap.show();
@@ -53,6 +53,7 @@ window.onload = function(){
     if(scY >= 80) {
       headerBtm.addClass('header-scroll');
       $('body').css('padding-top', 40);
+      $('.mobile-menu-btn').css('')
     }else{
       headerBtm.removeClass('header-scroll');
       $('body').css('padding-top', 0);
@@ -86,14 +87,14 @@ window.onload = function(){
 
   // LIKE 수 카운트
   let likeBtn = $('.likebtn > b');
-  let likeCount = 0;
-  likeBtn.html(likeCount);
+  likeBtn.html(0);
   let addLike = $('.likebtn');
   $.each(addLike, function(index, item){
     $(this).click(function(event){
       event.preventDefault();
-      likeCount ++;
-      likeBtn.html(likeCount);
+      let tempCount = $(this).find('>b').text();
+      tempCount = parseInt(tempCount) + 1;
+      $(this).find('>b').html(tempCount);
     });
   });
 };
