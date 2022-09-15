@@ -17,6 +17,16 @@ window.onload = function(){
     }
   });
 
+  // 반응형 처리
+  $(window).resize(function(){
+    // 화면의 너비
+    let temp = $(window).width();
+    if(temp > 1200) {
+      menuWrap.hide();
+      menuBtn.removeClass('menu-btn-close');
+    }
+  })
+
   // 모바일 메뉴 바깥 부분 클릭시 닫기
   menuWrap.click(function(){
     menuBtn.removeClass('menu-btn-close');
