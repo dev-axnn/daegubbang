@@ -1,15 +1,14 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+KR&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+KR&display=swap");
 
 @font-face {
-  font-family: 'EliceDigitalBaeum_Regular';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Regular.woff') format('woff');
+  font-family: "EliceDigitalBaeum_Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Regular.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
-
-
 
 * {
   margin: 0;
@@ -17,7 +16,8 @@
   box-sizing: border-box;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
 }
 
@@ -36,7 +36,8 @@ html {
 }
 
 body {
-  font-family: 'Montserrat','Noto Sans KR','Malgun Gothic','맑은 고딕',Dotum,'돋움','AppleGothic','Apple SD Gothic Neo',sans-serif;
+  font-family: "Montserrat", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", Dotum,
+    "돋움", "AppleGothic", "Apple SD Gothic Neo", sans-serif;
   font-weight: 400;
   font-size: 10px;
   line-height: 1.4;
@@ -45,7 +46,7 @@ body {
 
 /* === 공통요소 === */
 .clearfix::after {
-  content: '';
+  content: "";
   position: relative;
   display: block;
   width: 100%;
@@ -68,7 +69,7 @@ body {
 }
 
 .section-title::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 55px;
   left: 50%;
@@ -81,7 +82,7 @@ body {
 
 .section-txt {
   font-size: 16px;
-  font-family: 'EliceDigitalBaeum_Regular',serif;
+  font-family: "EliceDigitalBaeum_Regular", serif;
   color: #aaa;
   margin-bottom: 60px;
 }
@@ -89,7 +90,8 @@ body {
 /* === 개별요소 === */
 /* Modal Popup */
 .modal-wrap {
-  font-family: 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
+  font-family: "Noto Sans KR", Helvetica, "맑은 고딕", "malgun gothic",
+    "Apple SD Gothic Neo", sans-serif;
   position: fixed;
   left: 0;
   top: 0;
@@ -119,7 +121,8 @@ body {
   height: 86px;
   border-radius: 43px;
   border: 4px solid #fff;
-  background: #00b7ff url('../images/ahn-symbol_300x300_white.png') no-repeat center;
+  background: #00b7ff url("../images/ahn-symbol_300x300_white.png") no-repeat
+    center;
   background-size: 60%;
 }
 
@@ -199,7 +202,7 @@ body {
   width: 502px;
   height: 45px;
   border-radius: 0 0 19px 19px;
-  
+
   font-size: 16px;
   font-weight: 700;
   text-align: center;
@@ -228,7 +231,7 @@ body {
     font-size: 2.4vw;
     line-height: 3.2vw;
   }
-  
+
   .modal-notice span {
     font-size: 2.3vw;
     margin-top: 2%;
@@ -245,7 +248,7 @@ body {
     height: 33.75%;
     padding: 2vw 3vw;
   }
-  
+
   .modal-close {
     width: 71.1vw;
     height: 6.5vw;
@@ -269,7 +272,7 @@ body {
     font-size: 12px;
     line-height: 15px;
   }
-  
+
   .modal-notice span {
     font-size: 11px;
   }
@@ -287,18 +290,18 @@ body {
     font-size: 10px;
     line-height: 14px;
   }
-  
+
   .modal-corrections strong {
     font-size: 11px;
     margin-bottom: 4px;
     line-height: 14px;
   }
-  
+
   .corrections-number {
     float: left;
     width: 6%;
   }
-  
+
   .corrections-txt {
     float: right;
     width: 94%;
@@ -333,7 +336,7 @@ body {
 }
 
 .mobile-menu-btn span::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: -8px;
@@ -357,7 +360,7 @@ body {
 }
 
 .mobile-menu-btn span::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -8px;
@@ -368,8 +371,13 @@ body {
   transition: all 0.5s;
 }
 
+.menu-btn-close {
+  display: block;
+  top: 22px;
+}
+
 .menu-btn-close span {
-  width: 0;
+  background: #fff;
 }
 
 .menu-btn-close span::after {
@@ -407,7 +415,7 @@ body {
 }
 
 .mbmenu::before {
-  content: '';
+  content: "";
   display: block;
   margin: 0 5%;
   width: 90%;
@@ -433,7 +441,7 @@ body {
 
 .mbmenu > li > a {
   font-size: 18px;
-  font-family: 'EliceDigitalBaeum_Regular', serif;
+  font-family: "EliceDigitalBaeum_Regular", serif;
   font-weight: 600;
   line-height: 50px;
   letter-spacing: 0.06em;
@@ -460,7 +468,7 @@ body {
 
 .mbsubmenu > li a {
   font-size: 16px;
-  font-family: 'EliceDigitalBaeum_Regular', serif;
+  font-family: "EliceDigitalBaeum_Regular", serif;
   font-weight: 600;
   line-height: 50px;
   letter-spacing: 0.06em;
@@ -495,11 +503,11 @@ body {
 }
 
 .fc-sns-kakao {
-  background: #000 url('../images/fc-kakao.png') no-repeat center;
+  background: #000 url("../images/fc-kakao.png") no-repeat center;
 }
 
 .fc-sns-insta {
-  background: #000 url('../images/fc-insta.png') no-repeat center;
+  background: #000 url("../images/fc-insta.png") no-repeat center;
 }
 
 .fc-moving {
@@ -549,7 +557,7 @@ body {
   display: block;
   width: 285px;
   height: 52px;
-  background: url('../images/logo.png') no-repeat center;
+  background: url("../images/logo.png") no-repeat center;
   background-size: contain;
   font-size: 0;
 }
@@ -582,7 +590,7 @@ body {
 }
 
 .header-top-left > li:first-child::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 170px;
   top: 50%;
@@ -607,7 +615,7 @@ body {
 
 .comu-list {
   position: absolute;
-  top: 70%; 
+  top: 70%;
   left: 50%;
   transform: translateX(-50%);
   display: none;
@@ -657,7 +665,6 @@ body {
   color: #999;
 }
 
-
 .header-btm {
   position: relative;
   width: 100%;
@@ -672,7 +679,7 @@ body {
   left: 5%;
   width: 165px;
   height: 30px;
-  background: url('../images/logo.png') no-repeat center;
+  background: url("../images/logo.png") no-repeat center;
   background-size: contain;
   font-size: 0;
   visibility: hidden;
@@ -696,7 +703,7 @@ body {
 
 .header-gnb > li > a {
   font-size: 18px;
-  font-family: 'EliceDigitalBaeum_Regular', serif;
+  font-family: "EliceDigitalBaeum_Regular", serif;
   font-weight: 600;
   line-height: 30px;
   letter-spacing: 0.06em;
@@ -707,7 +714,7 @@ body {
 }
 
 .header-gnb > li > a::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -3px;
   left: 50%;
@@ -725,7 +732,7 @@ body {
 
 .header .depth2 {
   position: absolute;
-  top: 150%; 
+  top: 150%;
   left: 0;
   display: none;
   width: 150px;
@@ -832,7 +839,7 @@ body {
 }
 
 .header-scroll .depth2 {
-  top: 99.5%; 
+  top: 99.5%;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.04);
 }
 
@@ -846,7 +853,7 @@ body {
   display: block;
   width: 100%;
   height: calc(100vh - 155px);
-  background: url('../images/visual_1.jpg') no-repeat 50% 0%;
+  background: url("../images/visual_1.jpg") no-repeat 50% 0%;
   background-size: cover;
   margin: 0 auto;
   transition: height 0.3s;
@@ -874,7 +881,7 @@ body {
   display: block;
   width: 100%;
   font-size: 45px;
-  font-family: 'Noto Serif KR', serif;
+  font-family: "Noto Serif KR", serif;
   font-weight: 300;
   line-height: 1.2;
   text-align: center;
@@ -886,7 +893,7 @@ body {
   display: block;
   width: 100%;
   font-size: 17px;
-  font-family: 'EliceDigitalBaeum_Regular',serif;
+  font-family: "EliceDigitalBaeum_Regular", serif;
   font-weight: 300;
   line-height: 1.7;
   text-align: center;
@@ -902,7 +909,7 @@ body {
 
 .intro-main li {
   width: calc(100% / 3);
-  font-family: 'EliceDigitalBaeum_Regular',serif;
+  font-family: "EliceDigitalBaeum_Regular", serif;
   text-align: center;
   line-height: 1.4;
   float: left;
@@ -957,7 +964,7 @@ body {
   width: 85%;
   font-size: 18px;
   font-weight: 600;
-  font-family: 'EliceDigitalBaeum_Regular',serif;
+  font-family: "EliceDigitalBaeum_Regular", serif;
   letter-spacing: -0.03em;
   padding-bottom: 12px;
   border-bottom: 1px solid #ececec;
@@ -972,7 +979,7 @@ body {
 
 .best-item li p {
   font-size: 16px;
-  font-family: 'EliceDigitalBaeum_Regular',serif;
+  font-family: "EliceDigitalBaeum_Regular", serif;
   color: #aaa;
   margin-bottom: 4px;
 }
@@ -993,7 +1000,8 @@ body {
   height: 25px;
   font-size: 13px;
   font-weight: 400;
-  font-family: 'Montserrat','Noto Sans KR','Malgun Gothic','맑은 고딕',Dotum,'돋움','AppleGothic','Apple SD Gothic Neo',sans-serif;
+  font-family: "Montserrat", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", Dotum,
+    "돋움", "AppleGothic", "Apple SD Gothic Neo", sans-serif;
   line-height: 25px;
   text-align: center;
   color: #555;
@@ -1033,14 +1041,14 @@ body {
 
 .best-item li:hover .shopping-btn {
   visibility: visible;
-  opacity: 100; 
+  opacity: 100;
 }
 
 .shopping-btn li {
   display: inline-block;
   width: 32px;
   height: 30px;
-  
+
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
   border-left: 1px solid #e1e1e1;
@@ -1054,7 +1062,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  background: #fff url('../images/shopping-btn-cart.png') no-repeat center;
+  background: #fff url("../images/shopping-btn-cart.png") no-repeat center;
   background-size: cover;
 }
 
@@ -1062,7 +1070,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  background: #fff url('../images/shopping-btn-serch.png') no-repeat center;
+  background: #fff url("../images/shopping-btn-serch.png") no-repeat center;
   background-size: cover;
 }
 
@@ -1070,7 +1078,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  background: #fff url('../images/shopping-btn-blank.png') no-repeat center;
+  background: #fff url("../images/shopping-btn-blank.png") no-repeat center;
   background-size: cover;
 }
 
@@ -1081,7 +1089,8 @@ body {
 
   color: #777;
   font-size: 11px;
-  font-family: 'Montserrat','Noto Sans KR','Malgun Gothic','맑은 고딕',Dotum,'돋움','AppleGothic','Apple SD Gothic Neo',sans-serif;
+  font-family: "Montserrat", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", Dotum,
+    "돋움", "AppleGothic", "Apple SD Gothic Neo", sans-serif;
   padding: 4px 6px;
 }
 
@@ -1131,7 +1140,7 @@ body {
 
   width: 90%;
   height: 50.4px;
-  font-family: 'EliceDigitalBaeum_Regular',serif;
+  font-family: "EliceDigitalBaeum_Regular", serif;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.03em;
@@ -1169,14 +1178,14 @@ body {
 
 .new-item li:hover .shopping-btn {
   visibility: visible;
-  opacity: 100; 
+  opacity: 100;
 }
 
 .new-item .shopping-btn li {
   display: inline-block;
   width: 32px;
   height: 30px;
-  
+
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
   border-left: 1px solid #e1e1e1;
@@ -1196,7 +1205,7 @@ body {
   left: 0;
   width: 100%;
   height: 420px;
-  background: url('../images/brand-bg.jpg') no-repeat center;
+  background: url("../images/brand-bg.jpg") no-repeat center;
   background-attachment: fixed;
   background-size: cover;
 }
@@ -1217,7 +1226,7 @@ body {
 }
 
 .brand h2::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 165px;
   left: 50%;
@@ -1233,21 +1242,20 @@ body {
   flex-direction: row;
   width: 100%;
   height: 433px;
-
 }
 
 .brandstory-img {
   flex-basis: 50%;
   width: 50%;
   height: 433px;
-  background: #fff url('../images/brandstory-img.jpg') no-repeat center;
+  background: #fff url("../images/brandstory-img.jpg") no-repeat center;
   background-size: cover;
 }
 
 .brandstory-txt {
   position: relative;
   flex-basis: 50%;
-  background: #fff url('../images/brandstory-bg.png') no-repeat center;
+  background: #fff url("../images/brandstory-bg.png") no-repeat center;
   background-size: cover;
   padding: 70px 50px;
 }
@@ -1255,13 +1263,13 @@ body {
 .brand-logo {
   display: block;
   width: 235px;
-  height:33px;
+  height: 33px;
 }
 
 .brandstory-txt p {
   font-size: 18px;
   font-weight: 300;
-  font-family: 'EliceDigitalBaeum_Regular',serif;
+  font-family: "EliceDigitalBaeum_Regular", serif;
   line-height: 1.6;
   letter-spacing: -0.02em;
   color: #656565;
@@ -1430,7 +1438,7 @@ body {
   font-weight: 300;
   text-align: center;
   line-height: 1.7;
-  color: #222
+  color: #222;
 }
 
 .footer-top li span strong {
@@ -1514,8 +1522,8 @@ body {
   cursor: pointer;
 }
 
-
-.footer-btm-1, .footer-btm-2 {
+.footer-btm-1,
+.footer-btm-2 {
   display: block;
   width: fit-content;
   margin: 0 auto 10px;
